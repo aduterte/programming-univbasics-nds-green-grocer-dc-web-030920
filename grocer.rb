@@ -74,9 +74,9 @@ def apply_clearance(cart)
 
   i = 0
   while i < cart.length do
-    if cart[i][:clearance] == "true"
+    if cart[i][:clearance] == true
       clearance = ".80"
-      cart[i][:price] = 1
+      cart[i][:price] *= clearance.to_f
       cart << cart[i]
     end
     i += 1
