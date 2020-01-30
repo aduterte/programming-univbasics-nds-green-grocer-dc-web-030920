@@ -75,7 +75,7 @@ def apply_clearance(cart)
   i = 0
   while i < cart.length do
     if cart[i][:clearance]
-      
+
       cart[i][:price] *= 0.80
       clearance << cart[i]
     else
@@ -97,4 +97,7 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+
+  c_cart = consolidate_cart(cart)
+  puts c_cart
 end
