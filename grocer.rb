@@ -78,6 +78,8 @@ def apply_clearance(cart)
       clearance = ".80"
       cart[i][:price] *= clearance.to_f
       cart << cart[i]
+    else
+      cart << cart[i]
     end
     i += 1
   end
