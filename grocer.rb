@@ -81,7 +81,7 @@ def apply_clearance(cart)
     else
       clearance << cart[i]
     end
-     
+
     i += 1
   end
   clearance
