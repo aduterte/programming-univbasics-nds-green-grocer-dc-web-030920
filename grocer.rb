@@ -99,7 +99,7 @@ def checkout(cart, coupons)
   # some irritated customers
 
   c_cart = consolidate_cart(cart)
-  coupon_cart = apply_coupons(c_cart, coupons)
+  coupon_cart = apply_coupons(c_cart)
   clearance = apply_clearance(coupon_cart)
 
   i=0
@@ -108,6 +108,7 @@ def checkout(cart, coupons)
   total += clearance[i][:price]
   i += 1
   end
+
   if total > 100
     total *= 0.90
     total
